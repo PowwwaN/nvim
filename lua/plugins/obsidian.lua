@@ -15,13 +15,14 @@ return {
     require("obsidian").setup({
       workspaces = {
         {
-          name = "obsidian.md.d",
-          path = "~/obsidian.md.d",
+          name = "Vault",
+          path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault",
         },
       },
       completion = {
         nvim_cmp = true,
         min_chars = 2,
+        default = {},
       },
       -- conceallevel = 1,
     })

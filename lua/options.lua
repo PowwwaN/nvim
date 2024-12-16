@@ -1,7 +1,7 @@
 --tabs & tabulation
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
-vim.cmd("set softtabstop=4")
+vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 --numbers
@@ -25,7 +25,7 @@ vim.opt.clipboard:append("unnamedplus")
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 -- make it so vim moves the view nicely
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 12
 
 vim.opt.iskeyword:append("-")
 
@@ -36,6 +36,9 @@ vim.opt.conceallevel = 2
 vim.cmd([[
   hi NotifyBackground guibg = #000000
 ]])
+
+-- fzf in vim
+-- vim.cmd()
 
 -- remove ugly corners
 -- vim.cmd(":hi! link StatusLine Normal") -- it doesnt work 

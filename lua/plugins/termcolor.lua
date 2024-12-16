@@ -1,0 +1,1 @@
+return { 'psliwka/termcolors.nvim' }

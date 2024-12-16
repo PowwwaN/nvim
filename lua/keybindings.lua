@@ -50,6 +50,13 @@ vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quic
 -- make C-Backspace work in insert mode
 vim.keymap.set('i', '<C-BS>', '<C-W>')
 
+-- j and k for multi row lines
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
+-- zen mode
+vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<CR>")
+
 -- spec animations
 -- Press <C-b> to call specs!
 -- vim.api.nvim_set_keymap('n', '<C-b>', ':lua require("specs").show_specs()', { noremap = true, silent = true })
@@ -68,3 +75,7 @@ vim.keymap.set('i', '<C-BS>', '<C-W>')
 -- toggle_ukrainian_layout in neovim
 vim.api.nvim_set_keymap('n', '<leader>ua', ':lua require("functions").toggle_ukrainian_layout()<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>de', ':lua require("functions").toggle_german_layout()<CR>', {noremap = true, silent = true})
+
+-- Copliot chat
+vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "<leader>cc", ":<C-U>CopilotChat<CR>", { noremap = true, silent = true })

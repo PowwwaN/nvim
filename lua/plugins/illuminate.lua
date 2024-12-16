@@ -3,7 +3,7 @@ return {
   lazy = true,
   config = function ()
     require("illuminate").configure({
-      under_cursor = false,
+      under_cursor = true,
     })
   end
 }

@@ -34,7 +34,7 @@ return {
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
       local cmp = require("cmp")
       local luasnip = require("luasnip")
-      -- local lspkind = require("lspkind")
+      local lspkind = require("lspkind")
       require("luasnip.loaders.from_vscode").lazy_load()
 
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
@@ -101,12 +101,12 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- For luasnip users.
           { name = "buffer" },
-          --          { name = "copilot" },
+          { name = "copilot" },
         }, {}),
         experimental = {
           ghost_text = true,
         },
-        --[[         formatting = {
+        formatting = {
           expandable_indicator = true,
           format = lspkind.cmp_format({
             mode = "symbol_text",
@@ -116,7 +116,7 @@ return {
               Copilot = "",
             },
           }),
-        }, ]]
+        },
       })
     end,
   },
