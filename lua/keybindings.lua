@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 --leave insert mode with jk
-vim.keymap.set('i', 'jj', '<ESC>')
+-- vim.keymap.set('i', 'jj', '<ESC>')
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -79,3 +79,7 @@ vim.api.nvim_set_keymap('n', '<leader>de', ':lua require("functions").toggle_ger
 -- Copliot chat
 vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<leader>cc", ":<C-U>CopilotChat<CR>", { noremap = true, silent = true })
+
+--
+-- vim.keymap.set("n", "<leader>dt", require("dap").toggle_breakpoint, {})
+-- vim.keymap.set("n", "<leader>dc", require("dap").continue, {})

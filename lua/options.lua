@@ -43,3 +43,21 @@ vim.cmd([[
 -- remove ugly corners
 -- vim.cmd(":hi! link StatusLine Normal") -- it doesnt work 
 -- vim.cmd(":hi! link StatusLineNC Normal") -- it doesnt work  
+
+-- vim.api.nvim_create_autocmd("FileType", {
+--     pattern = "c",
+--     callback = function()
+--         vim.bo.tabstop = 4
+--         vim.bo.shiftwidth = 4
+--         vim.bo.expandtab = true
+--     end,
+-- })
+
+vim.opt.linebreak = true
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "text", "markdown" },
+    callback = function()
+        vim.opt.wrap = true
+    end,
+})
